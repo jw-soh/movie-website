@@ -1,0 +1,203 @@
+/* This CSS file is created with a purpose to override the Bootstrap
+   styles where applicable. However, some styling for templates such as movie gallery is styled from scratched without CSS framework as it is easier. */
+
+:root {
+  --theme-color: #bd6800;
+}
+
+body {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+body>* {
+  padding: 0;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-buttons {
+  display: flex;
+}
+
+.navbar-buttons>button.btn {
+  border: 2px solid var(--theme-color);
+  color: var(--theme-color);
+}
+
+.navbar-buttons>button.navbar-toggler {
+  margin-left: 5px;
+  color: #fff;
+  background-color: var(--theme-color);
+}
+
+#navbarSupportedContent {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  margin: 0 !important;
+}
+
+.nav-link:hover {
+  /* Something is preventing the override when !important is not used */
+  color: var(--theme-color) !important;
+}
+
+.fab {
+  color: var(--theme-color);
+  font-size: 40px;
+  padding: 0 5px;
+}
+
+form,
+.form-group {
+  border: 5px solid var(--theme-color);
+}
+
+.form-group {
+  margin: 0;
+}
+
+form select {
+  width: 100%;
+  border: 0;
+  color: var(--theme-color);
+}
+
+form>button {
+  /* width: 100%; */
+  color: var(--theme-color) !important;
+  border-radius: 0 !important;
+  font-weight: bold !important;
+  border: 5px solid var(--theme-color) !important;
+}
+
+aside {
+  background-color: var(--theme-color);
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.advertisements {
+  margin: 0;
+  max-width: 100%;
+}
+
+.advertisements .advertisement {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.advertisements img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(33, 37, 41);
+}
+
+footer>button {
+  color: white;
+  background-color: var(--theme-color) !important;
+  border-color: var(--theme-color) !important;
+}
+
+footer>nav {
+  display: none;
+}
+
+footer>nav a {
+  color: inherit;
+}
+
+.footer-copyright {
+  margin: 20px 0 30px 0;
+}
+
+.disappear {
+  display: none;
+}
+
+/* Custom styles for movies page */
+.movie-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.movie-gallery-card img {
+  height: 320px;
+  width: 100%;
+}
+
+.movie-gallery-card>h2 {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--theme-color);
+  margin: 10px 0;
+}
+
+.movie-gallery-card>p {
+  color: #666;
+  font-size: 12px;
+}
+
+@media (min-width: 991.98px) {
+  .navbar-buttons>button.btn {
+    display: none;
+  }
+
+  .movie-booking-form {
+    display: flex;
+    border: 0;
+    justify-content: space-between;
+  }
+
+  .form-group {
+    border-radius: 5px;
+    border-width: 1px;
+    height: 26px;
+  }
+
+  #select-movie-btn {
+    flex-grow: 3;
+  }
+
+  #select-cinema-btn {
+    flex-grow: 2;
+  }
+
+  #select-day-btn {
+    flex-grow: 1;
+  }
+
+  #select-time-btn {
+    flex-grow: 1;
+  }
+
+  .movie-booking-form>button {
+    padding: 0 20px;
+    height: 26px;
+    border-width: 1px !important;
+    border-radius: 5px !important;
+  }
+
+  .movie-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+
+  footer>nav {
+    display: block;
+  }
+}
