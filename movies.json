@@ -1,0 +1,112 @@
+[
+  {
+    "MovieID": "0",
+    "name": "Disney's Jungle Cruise",
+    "picture": "../img/movies/disneys-jungle-cruise.PNG",
+    "language": "English",
+    "rating": "PG 13",
+    "genre": "Action",
+    "price": "8.0",
+    "description": "Some Violence",
+    "duration": "127"
+  },
+  {
+    "MovieID": "1",
+    "name": "Hi! Brother",
+    "picture": "../img/movies/hi-brother.PNG",
+    "language": "English",
+    "rating": "PG",
+    "genre": "Comedy",
+    "price": "7.5",
+    "description": "Comedy",
+    "duration": "105"
+  },
+  {
+    "MovieID": "2",
+    "name": "Snake Eyes",
+    "picture": "../img/movies/snake-eyes.PNG",
+    "language": "English",
+    "rating": "PG 13",
+    "genre": "Action",
+    "price": "7.5",
+    "description": "Some Violence and Coarse Language",
+    "duration": "121"
+  },
+  {
+    "MovieID": "3",
+    "name": "Gunpowder Milkshake",
+    "picture": "../img/movies/gunpowder-milkshake.PNG",
+    "language": "English",
+    "rating": "M18",
+    "genre": "Action",
+    "price": "8.5",
+    "description": "Violence and Gore",
+    "duration": "115"
+  },
+  {
+    "MovieID": "4",
+    "name": "Space Jam, A new legacy",
+    "picture": "../img/movies/space-jam.PNG",
+    "language": "English",
+    "rating": "PG",
+    "genre": "Comedy",
+    "price": "7.5",
+    "description": "",
+    "duration": "116"
+  },
+  {
+    "MovieID": "5",
+    "name": "Ice Road",
+    "picture": "../img/movies/ice-road.PNG",
+    "language": "English",
+    "rating": "PG 13",
+    "genre": "Adventure",
+    "price": "8.0",
+    "description": "Some Coarse Language and Intense",
+    "duration": "109"
+  },
+  {
+    "MovieID": "6",
+    "name": "In the heights",
+    "picture": "../img/movies/in-the-heights.PNG",
+    "language": "English",
+    "rating": "PG",
+    "genre": "Drama",
+    "price": "8.0",
+    "description": "Some Sexual",
+    "duration": "143"
+  },
+  {
+    "MovieID": "7",
+    "name": "Marvel Studio's Black Widow",
+    "picture": "../img/movies/marvel-studios-black-widow.PNG",
+    "language": "English",
+    "rating": "PG 13",
+    "genre": "Action",
+    "price": "8.5",
+    "description": "Some Violence",
+    "duration": "134"
+  },
+  {
+    "MovieID": "8",
+    "name": "Cruella",
+    "picture": "../img/movies/cruella.PNG",
+    "language": "English",
+    "rating": "PG",
+    "genre": "Comedy",
+    "price": "8.5",
+    "description": "",
+    "duration": "134"
+  },
+  {
+    "MovieID": "9",
+    "name": "Fast and Furious 9",
+    "picture": "../img/movies/fast-and-furious-9.PNG",
+    "language": "English",
+    "rating": "PG 13",
+    "genre": "Action",
+    "price": "8.5",
+    "description": "Some Violence",
+    "duration": "143"
+  }
+]
