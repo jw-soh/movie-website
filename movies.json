@@ -2,6 +2,7 @@
   {
     "MovieID": "0",
     "name": "Disney's Jungle Cruise",
+    "handler": "disneys-jungle-cruise",
     "picture": "../img/movies/disneys-jungle-cruise.PNG",
     "language": "English",
     "rating": "PG 13",
@@ -13,6 +14,7 @@
   {
     "MovieID": "1",
     "name": "Hi! Brother",
+    "handler": "hi-brother",
     "picture": "../img/movies/hi-brother.PNG",
     "language": "English",
     "rating": "PG",
@@ -24,6 +26,7 @@
   {
     "MovieID": "2",
     "name": "Snake Eyes",
+    "handler": "snake-eyes",
     "picture": "../img/movies/snake-eyes.PNG",
     "language": "English",
     "rating": "PG 13",
@@ -35,6 +38,7 @@
   {
     "MovieID": "3",
     "name": "Gunpowder Milkshake",
+    "handler": "gunpowder-milkshake",
     "picture": "../img/movies/gunpowder-milkshake.PNG",
     "language": "English",
     "rating": "M18",
@@ -46,6 +50,7 @@
   {
     "MovieID": "4",
     "name": "Space Jam, A new legacy",
+    "handler": "space-jam-a-new-legacy",
     "picture": "../img/movies/space-jam.PNG",
     "language": "English",
     "rating": "PG",
@@ -57,6 +62,7 @@
   {
     "MovieID": "5",
     "name": "Ice Road",
+    "handler": "ice-road",
     "picture": "../img/movies/ice-road.PNG",
     "language": "English",
     "rating": "PG 13",
@@ -68,6 +74,7 @@
   {
     "MovieID": "6",
     "name": "In the heights",
+    "handler": "in-the-heights",
     "picture": "../img/movies/in-the-heights.PNG",
     "language": "English",
     "rating": "PG",
@@ -79,6 +86,7 @@
   {
     "MovieID": "7",
     "name": "Marvel Studio's Black Widow",
+    "handler": "marvel-studios-black-widow",
     "picture": "../img/movies/marvel-studios-black-widow.PNG",
     "language": "English",
     "rating": "PG 13",
@@ -90,6 +98,7 @@
   {
     "MovieID": "8",
     "name": "Cruella",
+    "handler": "cruella",
     "picture": "../img/movies/cruella.PNG",
     "language": "English",
     "rating": "PG",
@@ -101,6 +110,7 @@
   {
     "MovieID": "9",
     "name": "Fast and Furious 9",
+    "handler": "fast-and-furious-9",
     "picture": "../img/movies/fast-and-furious-9.PNG",
     "language": "English",
     "rating": "PG 13",
