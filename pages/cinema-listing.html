@@ -13,6 +13,32 @@
   <link rel="stylesheet" href="../slick/slick.css">
   <!-- Place your kit's code here -->
   <script src="https://kit.fontawesome.com/9db8b166e2.js" crossorigin="anonymous"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgiO5KeQ6rysHkAnDvU3Hnb3dR2xwQUhU&callback=initMap&libraries=&v=weekly">
+  </script>
+
+  <style>
+    .cinema-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 15px;
+      row-gap: 15px;
+    }
+
+    .cinema-gallery-card {
+      height: 180px;
+    }
+
+    @media (min-width: 991.98px) {
+      .cinema-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+      }
+    }
+  </style>
+
   <title>Document</title>
 </head>
 
@@ -36,10 +62,10 @@
             <a class="nav-link" id="home-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="movies-link" href="">Movies</a>
+            <a class="nav-link" id="movies-link" href="../pages/movie-listing.html">Movies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="cinemas-link" href="../pages/cinema-listing.html">Cinemas</a>
+            <a class="nav-link" id="cinemas-link" href="">Cinemas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="promotions-link" href="">Promotions</a>
@@ -93,10 +119,8 @@
     Strictly no consumption of F&B within our premises. F&B purchases can be collected for takeaway after your movies.
   </aside>
 
-  <main>
-    <div class="movie-gallery">
+  <main class="cinema-gallery">
 
-    </div>
   </main>
 
   <footer>
@@ -130,5 +154,83 @@
   </footer>
 
   <script src="../js/movie-listing.js"></script>
+
+  <script>
+    const cinemas = [{
+      name: "the-cathay-cineplex",
+      center: {
+        lat: 1.2995083,
+        lng: 103.8455891
+      }
+    }, {
+      name: "cathay-cineplex-cineleisure",
+      center: {
+        lat: 1.3016866,
+        lng: 103.8343848
+      }
+    }, {
+      name: "cathay-cineplex-causeway-point",
+      center: {
+        lat: 1.4360933,
+        lng: 103.7837584
+      }
+    }, {
+      name: "cathay-cineplex-amk-hub",
+      center: {
+        lat: 1.36953,
+        lng: 103.8462511
+      }
+    }, {
+      name: "cathay-cineplex-downtown-east",
+      center: {
+        lat: 1.3764492,
+        lng: 103.9536639
+      }
+    }, {
+      name: "cathay-cineplex-west-mall",
+      center: {
+        lat: 1.3496517,
+        lng: 103.7468471
+      }
+    }, {
+      name: "cathay-cineplex-jem",
+      center: {
+        lat: 1.3328303,
+        lng: 103.7410769
+      }
+    }, {
+      name: "cathay-cineplex-parkway-parade",
+      center: {
+        lat: 1.3328303,
+        lng: 103.7410769
+      }
+    }];
+
+    let text = "";
+    for (let cinema of cinemas) {
+      text += (
+        `<div class=\"cinema-gallery-card\" id=\"${cinema.name}\">Hi</div>`
+      );
+    }
+
+    document.querySelector(".cinema-gallery").innerHTML = text;
+    // Initialize and add the map
+    function initMap() {
+
+      cinemas.forEach(cinema => {
+        const map = new google.maps.Map(document.getElementById(cinema.name), {
+          zoom: 14,
+          center: cinema.center,
+        });
+
+        const marker = new google.maps.Marker({
+          position: cinema.center,
+          map: map,
+        });
+      })
+    }
+  </script>
+
 </body>
+
 </html>
