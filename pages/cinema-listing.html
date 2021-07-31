@@ -25,7 +25,7 @@
       row-gap: 15px;
     }
 
-    .cinema-gallery-card {
+    .cinema-map {
       height: 180px;
     }
 
@@ -209,7 +209,12 @@
     let text = "";
     for (let cinema of cinemas) {
       text += (
-        `<div class=\"cinema-gallery-card\" id=\"${cinema.name}\">Hi</div>`
+              "<div>" +
+                `<div class=\"cinema-map\" id=\"${cinema.name}\"></div>` +
+                "<button></button" +
+                "<h2></h2>" +
+                "<p></p>" +
+              "</div>"
       );
     }
 
