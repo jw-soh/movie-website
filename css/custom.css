@@ -272,3 +272,52 @@ font-size: 14px;
     font-size: 10px;
   }      
 }
+
+/***** Styles for cinema listing page *****/
+.cinema-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.cinema-gallery-card > button {
+  background-color: #fff;
+  border: 1px solid var(--theme-color);
+  border-radius: 2px;
+  color: var(--theme-color);
+  height: 30px;
+  width: 100%;
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.cinema-gallery-card > button:hover {
+  background-color: var(--theme-color);
+  color: #fff;
+}
+
+.cinema-map {
+  height: 180px;
+}
+
+.cinema-display-name {
+  font-size: 12px;  
+  font-weight: 500;
+  color: var(--theme-color);
+  text-transform: uppercase;
+}
+
+.cinema-address {
+  font-size: 11px;  
+  width: 50%;
+}
+
+@media (min-width: 991.98px) {
+  .cinema-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+}

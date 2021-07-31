@@ -17,28 +17,6 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgiO5KeQ6rysHkAnDvU3Hnb3dR2xwQUhU&callback=initMap&libraries=&v=weekly">
   </script>
 
-  <style>
-    .cinema-gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 15px;
-      row-gap: 15px;
-    }
-
-    .cinema-map {
-      height: 180px;
-    }
-
-    @media (min-width: 991.98px) {
-      .cinema-gallery {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 15px;
-        row-gap: 15px;
-      }
-    }
-  </style>
-
   <title>Document</title>
 </head>
 
@@ -152,76 +130,89 @@
       website shall not be
       reproduced in any form in whole or in part. We reserve all rights.</p>
   </footer>
-
-  <script src="../js/movie-listing.js"></script>
-
   <script>
     const cinemas = [{
       name: "the-cathay-cineplex",
       center: {
         lat: 1.2995083,
         lng: 103.8455891
-      }
+      },
+      address: "2 Handy Road Levels 5 & 6, The Cathay Singapore 229233",
+      mrt: "Dhoby Ghaut"
     }, {
       name: "cathay-cineplex-cineleisure",
       center: {
         lat: 1.3016866,
         lng: 103.8343848
-      }
+      },
+      address: "8 Grange Road Levels 4, 5 & 6, Cathay Cineleisure Singapore 239695",
+      mrt: "Somerset"
     }, {
       name: "cathay-cineplex-causeway-point",
       center: {
         lat: 1.4360933,
         lng: 103.7837584
-      }
+      },
+      address: "1 Woodlands Square Level 7, Causeway Point Singapore 738099",
+      mrt: "Woodlands"
     }, {
       name: "cathay-cineplex-amk-hub",
       center: {
         lat: 1.36953,
         lng: 103.8462511
-      }
+      },
+      address: "53 Ang Mo Kio Ave 3 Level 4, AMK Hub Singapore 569933",
+      mrt: "Ang Mo Kio"
     }, {
       name: "cathay-cineplex-downtown-east",
       center: {
         lat: 1.3764492,
         lng: 103.9536639
-      }
+      },
+      address: "Market Square @ Downtown East 1 Pasir Ris Close Level 4, E!Hub Singapore 519599",
+      mrt: "Pasir Ris"
     }, {
       name: "cathay-cineplex-west-mall",
       center: {
         lat: 1.3496517,
         lng: 103.7468471
-      }
+      },
+      address: "1 Bukit Batok Central Link Level 5, West Mall Singapore 658713",
+      mrt: "Bukit Batok"
     }, {
       name: "cathay-cineplex-jem",
       center: {
         lat: 1.3328303,
         lng: 103.7410769
-      }
+      },
+      address: "50 Jurong Gateway Road Level 5, Jem Singapore 608549",
+      mrt: "Jurong East"
     }, {
       name: "cathay-cineplex-parkway-parade",
       center: {
         lat: 1.3328303,
         lng: 103.7410769
-      }
+      },
+      address: "80 Marine Parade Road Level 7, Parkway Parade Singapore 449269",
+      mrt: ""
     }];
 
     let text = "";
     for (let cinema of cinemas) {
+      let cinemaDisplayName = cinema.name.replaceAll('-', ' ');
       text += (
-              "<div>" +
+              "<div class=\"cinema-gallery-card\">" +
                 `<div class=\"cinema-map\" id=\"${cinema.name}\"></div>` +
-                "<button></button" +
-                "<h2></h2>" +
-                "<p></p>" +
+                "<button>SHOWTIMES</button>" +
+                `<h2 class=\"cinema-display-name\">${cinemaDisplayName}</h2>` +
+                `<p class=\"cinema-address\">${cinema.address}</p>` +
               "</div>"
       );
     }
-
     document.querySelector(".cinema-gallery").innerHTML = text;
-    // Initialize and add the map
-    function initMap() {
 
+    // Initializes and add the google maps on the cinema listing page
+    function initMap() {
       cinemas.forEach(cinema => {
         const map = new google.maps.Map(document.getElementById(cinema.name), {
           zoom: 14,

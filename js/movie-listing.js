@@ -20,6 +20,7 @@ xmlhttp.onload = function () {
           );
   }
   // After the document has loaded the movie gallery, the event listeners will be applied to individual movie gallery cards.
+  
   document.querySelector(".movie-gallery").innerHTML = text;
 }
 
