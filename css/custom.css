@@ -15,6 +15,10 @@ body>* {
   padding: 0;
 }
 
+main {
+  position: relative;
+}
+
 .navbar {
   padding: 0;
 }
@@ -334,3 +338,66 @@ font-size: 14px;
     row-gap: 15px;
   }
 }
+
+/***** Styles for movie detai page, notes section *****/
+.movie-notes {
+  position: absolute;
+  padding: 7px;
+  top: -100vh; /* For hiding the notes container before activation */
+  background-color: rgb(207, 207, 207);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.activated {
+  animation-name: slidein;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    top: -50%;
+    box-shadow: 0 0 0 0vh rgb(0 0 0 / 30%);
+  }
+  75% {
+    top: 0;
+    box-shadow: 0 0 0 0vh rgb(0 0 0 / 30%);
+  }
+  to {
+    top: 0;
+    box-shadow: 0 0 0 100vh rgb(0 0 0 / 30%);
+  }
+}
+
+.movie-notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-notes-header > h2 {
+  font-size: 21px;
+}
+
+.movie-notes-display {
+  border: 0;
+  padding: 20px;
+}
+
+.movie-notes-display > label {
+  font-size: 13px;
+}
+
+.movie-notes-functional-buttons > button {
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+/* .movie-notes-functional-buttons > button:hover {
+  color: #fff;
+  background-color: var(--theme-color);
+} */
