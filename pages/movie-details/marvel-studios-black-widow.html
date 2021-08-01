@@ -99,7 +99,7 @@
       <div class="movie-related-links">
           <button class="showtimes">SHOWTIMES</button>
           <button class="view-trailer">VIEW TRAILER</button>
-          <button class="notes">NOTES</button>
+          <button class="notes" id="movie-notes-activation-button">NOTES</button>
       </div>
       <div class="movie-details-image">
         <img src="../../img/movies/marvel-studios-black-widow.png" />
@@ -139,6 +139,20 @@
         </div>
       </div>
     </div>
+    <section class="movie-notes">
+      <div class="movie-notes-header">
+        <h2>Notes</h2>
+        <i class="fas fa-times" id="movie-notes-deactivation-button"></i>
+      </div>
+      <form class="movie-notes-display">
+        <label for="notes">Write/Edit Notes:</label>
+        <textarea id="notes" name="notes" rows="8" cols="40" placeholder="Enter your notes here.."></textarea>
+        <section class="movie-notes-functional-buttons">
+          <button id="movie-notes-save-button">Save</button>
+          <button id="movie-notes-delete-button">Clear/Delete</button>
+        </section>
+      </form>
+    </section>
   </main>
 
   <footer>
@@ -170,6 +184,7 @@
       website shall not be
       reproduced in any form in whole or in part. We reserve all rights.</p>
   </footer>
+  <script src="../../js/movie-notes.js"></script>
 </body>
 
 </html>
