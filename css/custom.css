@@ -213,11 +213,16 @@ footer>nav a {
   margin-bottom: 15px;
 }
 
+.movie-related-links {
+  display: flex;
+  justify-content: space-between;
+}
+
 .movie-related-links button {
  font-size: 11px;
  color: var(--theme-color);
  height: 40px;
- width: 120px;
+ width: 100px;
  border: 2px solid var(--theme-color);
  border-radius: 4px;
  background-color: #fff;
@@ -270,7 +275,15 @@ font-size: 14px;
 
   .movie-specific-details p {
     font-size: 10px;
-  }      
+  }   
+  
+  .movie-related-links {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .movie-related-links > button {
+    margin-right: 10px;
+  }
 }
 
 /***** Styles for cinema listing page *****/
