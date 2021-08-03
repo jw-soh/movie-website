@@ -13,12 +13,16 @@
   <link rel="stylesheet" href="../slick/slick.css">
 
   <link rel="manifest" href="manifest.json">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="/img/icons/squirrel-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#bd6800">
+  
   <!-- Place your kit's code here -->
   <script src="https://kit.fontawesome.com/9db8b166e2.js" crossorigin="anonymous"></script>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgiO5KeQ6rysHkAnDvU3Hnb3dR2xwQUhU&callback=initMap&libraries=&v=weekly">
   </script>
-  
+
   <title>Document</title>
 </head>
 
@@ -203,12 +207,12 @@
     for (let cinema of cinemas) {
       let cinemaDisplayName = cinema.name.replaceAll('-', ' ');
       text += (
-              "<div class=\"cinema-gallery-card\">" +
-                `<div class=\"cinema-map\" id=\"${cinema.name}\"></div>` +
-                "<button>SHOWTIMES</button>" +
-                `<h2 class=\"cinema-display-name\">${cinemaDisplayName}</h2>` +
-                `<p class=\"cinema-address\">${cinema.address}</p>` +
-              "</div>"
+        "<div class=\"cinema-gallery-card\">" +
+        `<div class=\"cinema-map\" id=\"${cinema.name}\"></div>` +
+        "<button>SHOWTIMES</button>" +
+        `<h2 class=\"cinema-display-name\">${cinemaDisplayName}</h2>` +
+        `<p class=\"cinema-address\">${cinema.address}</p>` +
+        "</div>"
       );
     }
     document.querySelector(".cinema-gallery").innerHTML = text;
