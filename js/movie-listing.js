@@ -6,7 +6,7 @@ xmlhttp.onload = function () {
   for (let movie of movies) {
     text += (
           "<div class=\"movie-gallery-card\">" +
-            `<a href=\"../pages/movie-details/${movie.handler}.html\" target=\"_blank\">` +
+            `<a href=\"../pages/movie-details/${movie.handler}.html\">` +
               `<img src=\"${movie.picture}\">` +
             "</a>" +
             `<h2>${movie.name} ${movie.rating}</h2>` +
